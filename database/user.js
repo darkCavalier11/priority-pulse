@@ -23,7 +23,8 @@ const userSchema = new mongoose.Schema({
         required: true,
         type: Number,
         maxlength: 10,
-        minlength: 10
+        minlength: 10,
+        unique: true
     },
     location: {
         required: true,
