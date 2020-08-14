@@ -7,7 +7,8 @@ const userSchema = new mongoose.Schema({
     name: {
         required: true,
         type: String,
-        minlength: 3
+        minlength: 3,
+        unique: true
     },
     age: {
         required: true,
@@ -22,9 +23,15 @@ const userSchema = new mongoose.Schema({
     contact: {
         required: true,
         type: Number,
-        maxlength: 10,
-        minlength: 10,
-        unique: true
+        unique: true,
+        validate(value){
+            if(String(value).length !== 10){
+                throw new Error('Invalid contact number')
+            }
+            else{
+                return true
+            }
+        }
     },
     location: {
         required: true,

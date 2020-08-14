@@ -15,6 +15,35 @@ router.post('/add', async(req, res)=>{
     }
     catch(err){
         res.status(400).send({
+            error: "Already used contact number or name. Try again with different contact or name."
+        })
+    }
+})
+
+router.post('/update', async(req, res)=>{
+    try{
+        if (req.body.cred.name && req.body.cred.contact){
+            const availableForUpdate = ['age', 'contact', 'location']
+            const user = await UserModel.findOne(req.body.cred)
+            const updateQuery = req.body.updateQuery
+            const updateFields = Object.keys(req.body.updateQuery)
+            console.log(user)
+            for(i = 0; i < updateFields.length; i++){
+                if (! availableForUpdate.includes(updateFields[i])){
+                    throw new Error('Restrict to update')
+                }
+                user[updateFields[i]] = updateQuery[updateFields[i]]
+            }
+            console.log(user)
+            await user.save()
+            res.status(200).send(user)
+        }
+        else{
+            throw new Error('Invalid credentials')
+        }
+    }
+    catch(err){
+        res.send({
             error: err.message
         })
     }
