@@ -35,7 +35,8 @@
 ## Updating user(POST)
     localhost:3000/update
 ### template
-```json{
+```json
+    {
         "cred":{
             "name":"Sumit",
             "contact": 7750860059
@@ -54,13 +55,15 @@
 ## Querying user(GET)
     localhost:3000/getUserCred
 ### template
-```json{
+```json
+    {
         "age": 18
     }
-    ```
-    ```json{
+```
+```json
+    {
         "age": 18,
         "gender": "Male"
     }
 ```
-### {} query is the wild card i.e. return all
+##### {} query is the wild card i.e. return all
