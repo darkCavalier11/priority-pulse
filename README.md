@@ -19,7 +19,7 @@
 ## Adding user(POST)
     localhost:3000/add
 ### template
-    ```json
+```json
     {
         "name":"Sumit",
         "age": 20,
@@ -27,7 +27,7 @@
         "contact": 7750860059,
         "location": "cuttack, odisha"
     }
-    ```
+```
 ### criteria: 
     -duplicate phone number and names are rejected(case sensitive).
     -phone number of size less than 10 and name of size less than 10 rejected.
@@ -35,7 +35,7 @@
 ## Updating user(POST)
     localhost:3000/update
 ### template
-    ```json{
+```json{
         "cred":{
             "name":"Sumit",
             "contact": 7750860059
@@ -46,7 +46,7 @@
             "location": "Varnasi, UP"
         }
     }
-    ```
+```
 
 ### criteria:
     -name and gender updates are prohibited
@@ -54,7 +54,7 @@
 ## Querying user(GET)
     localhost:3000/getUserCred
 ### template
-    ```json{
+```json{
         "age": 18
     }
     ```
@@ -62,5 +62,5 @@
         "age": 18,
         "gender": "Male"
     }
-    ```
+```
 ### {} query is the wild card i.e. return all
