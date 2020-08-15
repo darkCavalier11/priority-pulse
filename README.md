@@ -1,19 +1,13 @@
 # Priority Pulse
 ## A node.js server with MongoDB
 
-## Packages used
-    - Mongoose, Express, nodemon
-
 ## Starting of server and DB
-    - install packages
+   - run mongodb locally(port 27017)
 ```bash
     npm i
-``` 
-    - run local mongodb server(port 27017)
-    - start the server
-```bash
     npm run start
-```
+``` 
+ 
 # Performing operations
 ## Data should be supplied in body in JSON format for add and update
 ## Adding user(POST)
