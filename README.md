@@ -6,14 +6,14 @@
 
 ## Starting of server and DB
     - install packages
-    ```bash
-        npm i
-    ``` 
+```bash
+    npm i
+``` 
     - run local mongodb server(port 27017)
     - start the server
-    ```bash
-        npm run start
-    ```
+```bash
+    npm run start
+```
 # Performing operations
 ## Data should be supplied in body in JSON format for add and update
 ## Adding user(POST)
@@ -66,4 +66,4 @@
         "gender": "Male"
     }
 ```
-##### {} query is the wild card i.e. return all
+##### null query or '{}' query is the wild card i.e. return all
