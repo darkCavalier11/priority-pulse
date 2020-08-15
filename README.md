@@ -23,8 +23,8 @@
     }
 ```
 ### criteria: 
-    -duplicate phone number and names are rejected(case sensitive).
-    -phone number of size less than 10 and name of size less than 10 rejected.
+- duplicate phone number and names are rejected(case sensitive).
+- phone number of size less than 10 and name of size less than 10 rejected.
 
 ## Updating user(POST)
     localhost:3000/update
@@ -44,7 +44,7 @@
 ```
 
 ### criteria:
-    -name and gender updates are prohibited
+- name and gender updates are prohibited
 
 ## Querying user(GET)
     localhost:3000/getUserCred
