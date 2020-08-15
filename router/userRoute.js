@@ -15,7 +15,7 @@ router.post('/add', async(req, res)=>{
     }
     catch(err){
         res.status(400).send({
-            error: "Already used contact number or name. Try again with different contact or name."
+            error: "Already used contact number or name. Try again again."
         })
     }
 })
@@ -43,7 +43,7 @@ router.post('/update', async(req, res)=>{
         }
     }
     catch(err){
-        res.send({
+        res.status(400).send({
             error: err.message
         })
     }
