@@ -1,6 +1,9 @@
 # Priority Pulse
 ## A node.js server with MongoDB
 
+## package used
+- nodemon, mongoose, express
+
 ## Starting of server and DB
    - run mongodb locally(port 27017)
 ```bash
