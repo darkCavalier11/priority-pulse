@@ -44,6 +44,7 @@
 ```
 
 ### criteria:
+- cred field is required for validate the user and then update the fields.
 - name and gender updates are prohibited
 
 ## Querying user(GET)
