@@ -1,0 +1,78 @@
+Adding a random person(name, age, gender, mobile number, location):
+
+    {
+        "name":"Sumit",
+        "age": 20,
+        "gender": "Male",
+        "contact": 7750860059,
+        "location": "cuttack, odisha"
+    }
+
+
+Gives the same age group person details:
+{
+	"age": 18
+}
+
+
+Gives same-gender person details:
+
+{
+    "gender": "Male"
+}
+
+Gives a specific person’s details with his id mentioned in the database:
+
+{
+	"_id": "5f36d397337692a75a56d33c"
+}
+
+
+
+
+Update the specific person’s details:
+
+    {
+        "cred":{
+            "name":"Sumit",
+            "contact": 7750860059
+        },
+        "updateQuery":{
+            "age": 21,
+            "contact": 7750860059,
+            "location": "Varnasi, UP"
+        }
+    }
+
+
+
+Gives same location person details: 
+
+{
+	"location": "Narsingpur, cuttack, odisha"
+}
+
+
+
+Person Details should not be the same, either the Name or Number:
+
+- person with same phone number as above:
+    {
+        "name":"duplicate",
+        "age": 20,
+        "gender": "Male",
+        "contact": 7750860059,
+        "location": "cuttack, odisha"
+    }
+
+- peson with same name as above:
+    {
+        "name":"Sumit",
+        "age": 20,
+        "gender": "Male",
+        "contact": 7750860053,
+        "location": "cuttack, odisha"
+    }
+
+
+
